@@ -1,7 +1,7 @@
 {
   "id" : "org.freecol.FreeCol",
   "runtime" : "org.freedesktop.Platform",
-  "runtime-version" : "18.08",
+  "runtime-version" : "19.08",
   "sdk" : "org.freedesktop.Sdk",
   "sdk-extensions" : [ "org.freedesktop.Sdk.Extension.openjdk11" ],
   "command": "freecol",
@@ -58,8 +58,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://imagemagick.org/download/ImageMagick-7.0.8-37.zip",
-          "sha256": "c0cf1d1ac02c7be479d777111eab4907c2152b1849da7be241617dfbb6c799cf"
+          "url": "https://imagemagick.org/download/releases/ImageMagick-7.0.8-68.tar.xz",
+          "sha256": "3639baa6ceb5db38b1b48a4b917f90fe007ca7edca1f7894d5555a0bc746305a"
         }
       ]
     },
