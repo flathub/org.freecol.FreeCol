@@ -1,0 +1,19 @@
+--- freecol-nightly-2019-01-02/packaging/common/freecol.appdata.xml	2019-01-02 16:29:20.000000000 -0500
++++ freecol-nightly-2019-01-02/packaging/common/freecol.appdata.xml-new	2020-04-23 20:45:55.309969143 -0400
+@@ -2,6 +2,8 @@
+ <application>
+     <id type="desktop">freecol.desktop</id>
+     <licence>CC0</licence>
++    <name>FreeCol</name>
++    <summary>FreeCol a turn-based strategy game.</summary>
+     <description>
+         <p>
+             The FreeCol team aims to create an Open Source version of Colonization (released under the GPL). 
+@@ -25,4 +27,7 @@
+         <screenshot type="default">http://www.freecol.org/images/screen-0.8.0-large.jpg</screenshot>
+     </screenshots>
+     <updatecontact>freecol-developers@lists.sourceforge.net</updatecontact>
++    <releases>
++      <release version="0.11.6" date="2015-10-17" />
++    </releases>
+ </application>
