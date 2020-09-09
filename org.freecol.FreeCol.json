@@ -1,7 +1,7 @@
 {
   "id" : "org.freecol.FreeCol",
   "runtime" : "org.freedesktop.Platform",
-  "runtime-version" : "19.08",
+  "runtime-version" : "20.08",
   "sdk" : "org.freedesktop.Sdk",
   "sdk-extensions" : [ "org.freedesktop.Sdk.Extension.openjdk11" ],
   "command": "freecol",
@@ -69,12 +69,6 @@
       "sources": [
           {
             "type": "archive",
-            "url": "https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.5-bin.tar.xz",
-            "sha256": "cebb705dbbe26a41d359b8be08ec066caba4e8686670070ce44bbf2b57ae113f",
-            "dest": "ant"
-          },
-          {
-            "type": "archive",
             "url": "https://github.com/FreeCol/freecol/archive/nightly-2019-01-02.zip",
             "sha256": "8f1daa1be356e078c7812f262f61d44543a6b2bd89f9a5344ac8ba9be2b195ab"
           },
@@ -83,8 +77,13 @@
             "path": "freecol-appdata.patch"
           }
       ],
+      "build-options": {
+        "env": {
+          "PATH": "/usr/bin:/app/bin:/usr/lib/sdk/openjdk11/bin"
+         }
+      },
       "build-commands": [
-        "export JAVA_HOME=/app/jre; ./ant/bin/ant",
+        "ant",
         "mkdir -p /app/bin/",
         "mv /run/build/freecol/FreeCol.jar /app/bin/"
       ],
