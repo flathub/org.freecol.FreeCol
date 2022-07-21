@@ -69,8 +69,8 @@
       "sources": [
           {
             "type": "archive",
-            "url": "https://github.com/FreeCol/freecol/archive/refs/tags/v0.13.0.zip",
-            "sha256": "b01740f1382732270fcf7d16425cf07d21280f48a5968b256b24d24290c35fa4"
+            "url": "https://github.com/FreeCol/freecol/archive/refs/tags/v0.13.0.tar.gz",
+            "sha256": "d129a85f4b00cdc75e7d47ba58cdbeea1cdb4da71c81ef17fcf1abb2fff1cafb"
           },
           {
             "type": "patch",
