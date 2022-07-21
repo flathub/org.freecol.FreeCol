@@ -70,7 +70,13 @@
           {
             "type": "archive",
             "url": "https://github.com/FreeCol/freecol/archive/nightly-2019-01-02.zip",
-            "sha256": "8f1daa1be356e078c7812f262f61d44543a6b2bd89f9a5344ac8ba9be2b195ab"
+            "sha256": "8f1daa1be356e078c7812f262f61d44543a6b2bd89f9a5344ac8ba9be2b195ab",
+            "x-checker-data": {
+              "type": "html",
+              "url": "https://www.freecol.org/download.html",
+              "version-pattern": "freecol-([\\d\\.-]*).zip",
+              "url-template": "https://github.com/FreeCol/freecol/archive/refs/tags/v$version.tar.gz"
+            }
           },
           {
             "type": "patch",
