@@ -58,8 +58,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://imagemagick.org/download/releases/ImageMagick-7.0.8-68.tar.xz",
-          "sha256": "3639baa6ceb5db38b1b48a4b917f90fe007ca7edca1f7894d5555a0bc746305a"
+          "url": "https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0.43.tar.gz",
+          "sha256": "62eccb3e8c89acc66c2b10a2bea843b6659a2ddce275c7d2ffee8c34af6114fd"
         }
       ]
     },
@@ -69,8 +69,8 @@
       "sources": [
           {
             "type": "archive",
-            "url": "https://github.com/FreeCol/freecol/archive/nightly-2019-01-02.zip",
-            "sha256": "8f1daa1be356e078c7812f262f61d44543a6b2bd89f9a5344ac8ba9be2b195ab"
+            "url": "https://github.com/FreeCol/freecol/archive/refs/tags/v0.13.0.tar.gz",
+            "sha256": "d129a85f4b00cdc75e7d47ba58cdbeea1cdb4da71c81ef17fcf1abb2fff1cafb"
           },
           {
             "type": "patch",
