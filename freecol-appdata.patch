@@ -1,7 +1,6 @@
---- freecol-nightly-2019-01-02/packaging/common/freecol.appdata.xml	2019-01-02 16:29:20.000000000 -0500
-+++ freecol-nightly-2019-01-02/packaging/common/freecol.appdata.xml-new	2020-04-23 20:45:55.309969143 -0400
-@@ -2,6 +2,8 @@
- <application>
+--- freecol-0.13.0/packaging/common/freecol.appdata.xml-orig	2022-08-21 20:46:35.610713762 -0400
++++ freecol-0.13.0/packaging/common/freecol.appdata.xml	2022-08-21 20:47:21.970198690 -0400
+@@ -3,6 +3,8 @@
      <id type="desktop">freecol.desktop</id>
      <project_license>GPL-2.0</project_license>
      <metadata_license>CC0-1.0</metadata_license>
@@ -10,11 +9,25 @@
      <description>
          <p>
              The FreeCol team aims to create an Open Source version of Colonization (released under the GPL). 
-@@ -25,4 +27,7 @@
+@@ -26,4 +28,10 @@
          <screenshot type="default">http://www.freecol.org/images/screen-0.8.0-large.jpg</screenshot>
      </screenshots>
      <updatecontact>freecol-developers@lists.sourceforge.net</updatecontact>
++    <content_rating type="oars-1.1">
++      <content_attribute id="violence-slavery">mild</content_attribute>
++    </content_rating>
 +    <releases>
 +      <release version="0.13.0" date="2022-07-11" />
 +    </releases>
  </application>
+--- freecol-0.13.0/packaging/common/freecol.svg-orig	2022-08-21 21:36:01.505979076 -0400
++++ freecol-0.13.0/packaging/common/freecol.svg	2022-08-21 21:36:16.948146161 -0400
+@@ -11,7 +11,7 @@
+    id="svg2443"
+    sodipodi:version="0.32"
+    inkscape:version="0.46"
+-   width="655"
++   width="714"
+    height="714"
+    version="1.0"
+    sodipodi:docname="galleon.svg"
