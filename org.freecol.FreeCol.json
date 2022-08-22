@@ -29,10 +29,13 @@
       "name" : "freecol",
       "buildsystem" : "simple",
       "build-options": {
+        "env": {
+          "FREECOL_VERSION": "0.13.0"
+        },
         "append-path": "/usr/lib/sdk/openjdk11/bin"
       },
       "build-commands": [
-        "ant",
+        "ant -noinput -Dfreecol.version=${FREECOL_VERSION} setReleaseVersion package",
         "mkdir -p /app/bin/",
         "mv FreeCol.jar /app/bin/"
       ],
