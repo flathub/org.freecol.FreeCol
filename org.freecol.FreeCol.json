@@ -3,7 +3,9 @@
   "runtime" : "org.freedesktop.Platform",
   "runtime-version" : "21.08",
   "sdk" : "org.freedesktop.Sdk",
-  "sdk-extensions" : [ "org.freedesktop.Sdk.Extension.openjdk11" ],
+  "sdk-extensions" : [
+    "org.freedesktop.Sdk.Extension.openjdk11"
+  ],
   "command": "freecol",
   "rename-icon": "freecol",
   "rename-appdata-file": "freecol.appdata.xml",
@@ -24,48 +26,25 @@
       "build-commands" : [ "/usr/lib/sdk/openjdk11/install.sh" ]
     },
     {
-      "name": "imagemagick",
-      "cleanup": ["*"],
-      "config-opts": [
-        "--enable-static=no",
-        "--disable-docs",
-        "--disable-deprecated",
-        "--without-autotrace",
-        "--without-bzlib",
-        "--without-djvu",
-        "--without-dps",
-        "--without-fftw",
-        "--without-fontconfig",
-        "--without-fpx",
-        "--without-freetype",
-        "--without-gvc",
-        "--without-jbig",
-        "--without-jpeg",
-        "--without-lcms",
-        "--without-lzma",
-        "--without-magick-plus-plus",
-        "--without-openexr",
-        "--without-openjp2",
-        "--without-pango",
-        "--without-raqm",
-        "--without-tiff",
-        "--without-webp",
-        "--without-wmf",
-        "--without-x",
-        "--without-xml",
-        "--without-zlib"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0.43.tar.gz",
-          "sha256": "62eccb3e8c89acc66c2b10a2bea843b6659a2ddce275c7d2ffee8c34af6114fd"
-        }
-      ]
-    },
-    {
       "name" : "freecol",
       "buildsystem" : "simple",
+      "build-options": {
+        "append-path": "/usr/lib/sdk/openjdk11/bin"
+      },
+      "build-commands": [
+        "ant",
+        "mkdir -p /app/bin/",
+        "mv FreeCol.jar /app/bin/"
+      ],
+      "post-install": [
+        "install -Dm755 packaging/common/freecol.sh /app/bin/freecol",
+        "cp -r data /app/bin/data",
+        "cp -r jars /app/bin/jars",
+        "cp -r packaging/common/freecol.sh /app/bin",
+        "install -Dm644 packaging/common/freecol.appdata.xml /app/share/appdata/freecol.appdata.xml",
+        "install -Dm644 packaging/common/freecol.desktop /app/share/applications/freecol.desktop",
+        "install -Dm644 packaging/common/freecol.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/freecol.svg"
+      ],
       "sources": [
           {
             "type": "archive",
@@ -76,30 +55,6 @@
             "type": "patch",
             "path": "freecol-appdata.patch"
           }
-      ],
-      "build-options": {
-        "env": {
-          "PATH": "/usr/bin:/app/bin:/usr/lib/sdk/openjdk11/bin"
-         }
-      },
-      "build-commands": [
-        "ant",
-        "mkdir -p /app/bin/",
-        "mv /run/build/freecol/FreeCol.jar /app/bin/"
-      ],
-      "post-install": [
-        "install -Dm755 /run/build/freecol/packaging/common/freecol.sh /app/bin/freecol",
-        "cp -r /run/build/freecol/data /app/bin/data",
-        "cp -r /run/build/freecol/jars /app/bin/jars",
-        "cp -r /run/build/freecol/packaging/common/. /app/bin",
-        "install -Dm644 /run/build/freecol/packaging/common/freecol.appdata.xml /app/share/appdata/freecol.appdata.xml",
-        "install -Dm644 /run/build/freecol/packaging/common/freecol.desktop /app/share/applications/freecol.desktop",
-        "convert /run/build/freecol/data/freecol.png -gravity center -background none -extent 96x96 freecol.png",
-        "install -Dm644 freecol.png ${FLATPAK_DEST}/share/icons/hicolor/96x96/apps/freecol.png",
-        "for i in 32 48 64 128; do
-            convert freecol.png -resize ${i}x${i} freecol${i}x${i}.png
-            install -Dm644 freecol${i}x${i}.png ${FLATPAK_DEST}/share/icons/hicolor/${i}x${i}/apps/freecol.png
-        done"
       ]
     }
   ]
