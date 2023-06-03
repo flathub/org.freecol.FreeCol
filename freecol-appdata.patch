@@ -9,7 +9,7 @@
      <description>
          <p>
              The FreeCol team aims to create an Open Source version of Colonization (released under the GPL). 
-@@ -26,4 +28,10 @@
+@@ -26,4 +28,11 @@
          <screenshot type="default">http://www.freecol.org/images/screen-0.8.0-large.jpg</screenshot>
      </screenshots>
      <updatecontact>freecol-developers@lists.sourceforge.net</updatecontact>
@@ -17,6 +17,7 @@
 +      <content_attribute id="violence-slavery">mild</content_attribute>
 +    </content_rating>
 +    <releases>
++      <release version="1.1.0" date="2023-05-20" />
 +      <release version="0.13.0" date="2022-07-11" />
 +    </releases>
  </application>
