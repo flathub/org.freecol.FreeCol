@@ -1,14 +1,14 @@
 {
   "id" : "org.freecol.FreeCol",
   "runtime" : "org.freedesktop.Platform",
-  "runtime-version" : "22.08",
+  "runtime-version" : "23.08",
   "sdk" : "org.freedesktop.Sdk",
   "sdk-extensions" : [
     "org.freedesktop.Sdk.Extension.openjdk11"
   ],
   "command": "freecol",
   "rename-icon": "freecol",
-  "rename-appdata-file": "freecol.appdata.xml",
+  "rename-appdata-file": "freecol.metainfo.xml",
   "rename-desktop-file": "freecol.desktop",
   "finish-args" : [
     "--env=PATH=/app/jre/bin:/usr/bin:/app/bin",
@@ -43,8 +43,7 @@
         "install -Dm755 packaging/common/freecol.sh /app/bin/freecol",
         "cp -r data /app/bin/data",
         "cp -r jars /app/bin/jars",
-        "cp -r packaging/common/freecol.sh /app/bin",
-        "install -Dm644 packaging/common/freecol.appdata.xml /app/share/appdata/freecol.appdata.xml",
+        "install -Dm644 packaging/common/freecol.appdata.xml /app/share/metainfo/freecol.metainfo.xml",
         "install -Dm644 packaging/common/freecol.desktop /app/share/applications/freecol.desktop",
         "install -Dm644 packaging/common/freecol.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/freecol.svg"
       ],
