@@ -30,7 +30,7 @@
       "buildsystem" : "simple",
       "build-options": {
         "env": {
-          "FREECOL_VERSION": "1.1.0"
+          "FREECOL_VERSION": "1.2.0"
         },
         "append-path": "/usr/lib/sdk/openjdk11/bin"
       },
@@ -50,8 +50,8 @@
       "sources": [
           {
             "type": "archive",
-            "url": "https://github.com/FreeCol/freecol/archive/refs/tags/v1.1.0.tar.gz",
-            "sha256": "9c70cbaa4513002888eda8d844fa02683cba09664c639fda15ea36c627f33204"
+            "url": "https://github.com/FreeCol/freecol/archive/refs/tags/v1.2.0.tar.gz",
+            "sha256": "21f5c0cddb885dc24756b4fb93728d53c4b20eb12fcad98757a66ec35b78710f"
           },
           {
             "type": "patch",

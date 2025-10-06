@@ -1,5 +1,5 @@
 diff --git a/packaging/common/freecol.appdata.xml b/packaging/common/freecol.appdata.xml
-index 8e262a8..5925b8a 100644
+index 8e262a8..ac717f3 100644
 --- a/packaging/common/freecol.appdata.xml
 +++ b/packaging/common/freecol.appdata.xml
 @@ -1,8 +1,10 @@
@@ -15,7 +15,7 @@ index 8e262a8..5925b8a 100644
      <description>
          <p>
              The FreeCol team aims to create an Open Source version of Colonization (released under the GPL). 
-@@ -21,9 +23,21 @@
+@@ -21,9 +23,26 @@
              FreeCol 2 will go beyond the original Colonization and will have many new features, it will be an implementation of our (and our users') image of what Colonization 2 would have been. 
          </p>
      </description>
@@ -24,8 +24,12 @@ index 8e262a8..5925b8a 100644
      <screenshots>
 -        <screenshot type="default">http://www.freecol.org/images/screen-0.8.0-large.jpg</screenshot>
 +        <screenshot type="default">
-+            <image>https://www.freecol.org/images/screen-0.8.0-large.jpg</image>
++            <image>https://www.freecol.org/images/screen-1.0.0.jpg</image>
 +            <caption>Gameplay</caption>
++        </screenshot>
++        <screenshot>
++            <image>https://www.freecol.org/images/screen-1.0.0-map-editor.jpg</image>
++            <caption>Map Editor</caption>
 +        </screenshot>
      </screenshots>
 -    <updatecontact>freecol-developers@lists.sourceforge.net</updatecontact>
@@ -37,6 +41,7 @@ index 8e262a8..5925b8a 100644
 +      <content_attribute id="violence-slavery">mild</content_attribute>
 +    </content_rating>
 +    <releases>
++      <release version="1.2.0" date="2024-07-04" />
 +      <release version="1.1.0" date="2023-05-20" />
 +      <release version="0.13.0" date="2022-07-11" />
 +    </releases>
